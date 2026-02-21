@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #ffffff;
+            --text-main: #e0e0e0;
+            --text-muted: #999999;
+            --link-color: #007AFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Hero Section */
+        header {
+            margin-bottom: 80px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -2px;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Cases Section */
+        .case {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .case:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--accent-color);
+        }
+
+        .period {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .role-tag {
+            display: inline-block;
+            background: #333;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 10px 0 20px 0;
+        }
+
+        .section-title {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .results-box {
+            background: #252525;
+            padding: 20px;
+            border-left: 4px solid var(--link-color);
+            margin-top: 25px;
+        }
+
+        .stats {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--link-color);
+        }
+
+        /* Skills & Links */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .link-btn {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+
+        .link-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* Gold Fund */
+        .gold-fund {
+            margin-top: 60px;
+        }
+
+        .gold-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .grid, .gold-grid { grid-template-columns: 1fr; }
+            .case { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Константин Орищенко</h1>
+        <p class="subtitle">Эксперт по запуску и масштабированию медиапродуктов</p>
+    </header>
+
+    <section class="case">
+        <div class="case-header">
+            <h2>Кейс №1: Литрес Журнал</h2>
+            <span class="period">2020 – 2024</span>
+        </div>
+        <div class="role-tag">Руководитель проекта / Главный редактор</div>
+        
+        <span class="section-title">Задача:</span>
+        <p>Создать собственное бренд-медиа внутри e-com платформы Литрес для привлечения органического трафика и повышения лояльности аудитории.</p>
+
+        <span class="section-title">Что было сделано:</span>
+        <ul>
+            <li>Разработал концепцию и стратегию развития проекта с этапа MVP.</li>
+            <li>Сформировал редакцию (30+ авторов) и внедрил систему управления конвейером контента.</li>
+            <li>Интегрировал медиа в продуктовую воронку (статьи → карточки книг → покупка).</li>
+            <li>Выстроил SEO-стратегию по высокочастотным литературным запросам.</li>
+        </ul>
+
+        <div class="results-box">
+            <span class="section-title">Результат:</span>
+            <div class="stats">1 000 000+ уников в месяц</div>
+            <p>Проект стал крупнейшим корпоративным медиа в книжной индустрии РФ.</p>
+            <a href="https://journal.litres.ru" target="_blank" class="link-btn">journal.litres.ru →</a>
+        </div>
+    </section>
+
+    <section class="case">
+        <div class="case-header">
+            <h2>Кейс №2: Видеоподкаст «Спич»</h2>
+        </div>
+        <div class="role-tag">Шоураннер / Креативный продюсер</div>
+        
+        <p><strong>Формат:</strong> Видеоинтервью с селебрити</p>
+        
+        <span class="section-title">Задача:</span>
+        <p>Запустить качественный видеопродакшн для охвата аудитории в YouTube и VK Video, уйти от имиджа «просто магазина» к имиджу «трендсеттера».</p>
+
+        <span class="section-title">Что было сделано:</span>
+        <ul>
+            <li>Создал визуальную концепцию (сет-дизайн, упаковка, динамика кадра).</li>
+            <li>Организовал работу с приглашенными звездами (Booking & Hospitality).</li>
+            <li>Курировал весь цикл: от сценарного плана до финального монтажа и дистрибуции.</li>
+        </ul>
+
+        <div class="results-box">
+            <p><strong>Результат:</strong> Сформирован пул из звездных гостей (Юрий Быков, Евгений Чебатков, Дарья Донцова и др.). Высокий уровень удержания и виральный охват.</p>
+            <a href="#" class="link-btn">YouTube Playlist</a>
+            <a href="#" class="link-btn">VK Video</a>
+        </div>
+    </section>
+
+    <section class="case">
+        <div class="case-header">
+            <h2>Кейс №3: Глобальный нетворкинг</h2>
+        </div>
+        <div class="role-tag">Интервьюер / Продюсер</div>
+        
+        <span class="section-title">Задача:</span>
+        <p>Создание уникального контента, обеспечивающего цитируемость бренда в федеральных и международных СМИ.</p>
+
+        <div class="gold-fund">
+            <h3 style="color: #FFD700;">✦ Избранные работы (Золотой фонд)</h3>
+            <div class="gold-grid">
+                <div>
+                    <span class="section-title">Мировые звезды:</span>
+                    <ul>
+                        <li>Бернар Вербер — о футурологии.</li>
+                        <li>Ицхак Адизес — о бизнесе и жизни.</li>
+                        <li>Фредерик Бегбедер — о литературе.</li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="section-title">Российские хедлайнеры:</span>
+                    <ul>
+                        <li>Евгений Водолазкин — о ритме прозы.</li>
+                        <li>Юлианна Караулова — о шоу-бизнесе.</li>
+                        <li>Сергей Лукьяненко — о фантастике.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 style="margin-top: 80px;">Hard Skills</h2>
+    <div class="grid">
+        <div class="skill-item">
+            <span class="section-title">Strategy</span>
+            <p>Разработка медиа-стратегий, Tone of Voice, редполитик.</p>
+        </div>
+        <div class="skill-item">
+            <span class="section-title">Growth</span>
+            <p>SEO-продвижение, дистрибуция контента, охватные метрики.</p>
+        </div>
+        <div class="skill-item">
+            <span class="section-title">Production</span>
+            <p>Шоураннинг видео и аудио (подкасты), управление съемками.</p>
+        </div>
+        <div class="skill-item">
+            <span class="section-title">Leadership</span>
+            <p>Управление распределенными командами (редакция, продакшн).</p>
+        </div>
+    </div>
+</div>
+
+</body>
+  </html>
